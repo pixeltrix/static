@@ -1,5 +1,6 @@
-// Remove bottom borders
+$breakpoint: 769px;
 
+// Remove bottom borders
 .govuk-header__super-navigation,
 .govuk-header__super-navigation-container {
   border-bottom: 0;
@@ -7,13 +8,38 @@
   padding-top: 0;
 }
 
+// logo
 .govuk-header__super-navigation-header-logo {
   padding: govuk-spacing(2) 0;
   margin-bottom: 0;
 }
 
+// header content
 .govuk-header__super-navigation-content {
-  @include govuk-media-query($from: 769px) {
+  @include govuk-media-query($from: $breakpoint) {
     text-align: right;
+  }
+}
+
+.govuk-heading__super-navigation-items {
+  margin-bottom: 0;
+}
+
+.govuk-heading__super-navigation-item {
+  display: flex;
+  margin-right: 0;
+  padding: 0;
+
+  @include govuk-media-query($from: $breakpoint) {
+    display: inline-flex;
+  }
+}
+
+.govuk-heading__super-navigation-item-link {
+  padding: govuk-spacing(3);
+  width: 100%;
+
+  @include govuk-media-query($from: $breakpoint) {
+    width: auto;
   }
 }
