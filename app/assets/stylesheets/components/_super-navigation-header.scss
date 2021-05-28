@@ -10,7 +10,8 @@ $breakpoint: 769px;
 
 // logo
 .govuk-header__super-navigation-header-logo {
-  padding: govuk-spacing(2) 0;
+  padding-top: govuk-spacing(2) + 4;
+  padding-bottom: govuk-spacing(2);
   margin-bottom: 0;
 }
 
@@ -36,7 +37,7 @@ $breakpoint: 769px;
 }
 
 .govuk-heading__super-navigation-item-link {
-  padding: govuk-spacing(3);
+  padding: govuk-spacing(3) + 2;
   width: 100%;
 
   @include govuk-media-query($from: $breakpoint) {
